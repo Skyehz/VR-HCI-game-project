@@ -6,9 +6,10 @@
   </a>
 
 <h3 align="center">VR Project </h3>
+<img src="./Assets/BJTU.png" alt="VrLogo" width="100" height="100">
+</br>
 Here is our VR repository of Beijing jiaotong Sutdents.<br/> You will find all the source code for our Unity VR project !
 <a href="https://github.com/Skyehz/VR-HCI-game-project">
-<img src="./Assets/BJTU.png" alt="VrLogo" width="100" height="100">
 </a>
 </div>
 
