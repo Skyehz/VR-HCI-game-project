@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 0a205e82d4075b346b912ccfe0a0bfd2
 ModelImporter:
-  serializedVersion: 20200
+  serializedVersion: 21300
   internalIDToNameTable:
   - first:
       1: 100000
@@ -389,7 +389,7 @@ ModelImporter:
     second: root
   - first:
       74: 7400000
-    second: MeleeWarrior@Death01_A
+    second: or@Death01_A@Death01_A
   - first:
       74: 7400002
     second: MeleeWarrior@Death01_B
@@ -410,6 +410,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -428,8 +429,8 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: MeleeWarrior@Death01_A
-      takeName: MeleeWarrior@Death01_A
+      name: MeleeWarrior@Death01_C (1)
+      takeName: MeleeWarrior@Death01_C
       internalID: 0
       firstFrame: 0
       lastFrame: 38
@@ -540,6 +541,7 @@ ModelImporter:
     importBlendShapes: 0
     importCameras: 0
     importLights: 0
+    nodeNameCollisionStrategy: 0
     fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
@@ -551,6 +553,7 @@ ModelImporter:
     skinWeightsMode: 0
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
+    optimizeBones: 1
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
@@ -1342,6 +1345,7 @@ ModelImporter:
   humanoidOversampling: 1
   avatarSetup: 2
   addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

@@ -4,21 +4,105 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a959ab16-d0dd-470b-8dd5-ec1c32e62a80" name="Changes" comment="" />
+    <list default="true" id="a959ab16-d0dd-470b-8dd5-ec1c32e62a80" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Baseball-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Baseball-main/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/Eyes.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/Eyes.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_hoodie_blueWhite_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_hoodie_blueWhite_mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_hoodie_grey_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_hoodie_grey_mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_hoodie_blue_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_hoodie_blue_mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_jacket_hive_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_jacket_hive_mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_shoe_low_white_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_shoe_low_white_mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_shoes_tall_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_shoes_tall_mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_shoes_tall_turquoise_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_shoes_tall_turquoise_mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_shorts_black_cotton_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_shorts_black_cotton_mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_shorts_hive_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_shorts_hive_mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_shorts_white_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_shorts_white_mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_sportpants_alt_black_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_sportpants_alt_black_mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_sportpants_blueWhite_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_sportpants_blueWhite_mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_sportpants_grey_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_sportpants_grey_mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_sweatpants_black_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_sweatpants_black_mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_swimwear_granit_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_swimwear_granit_mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_tanktop_yellow_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_tanktop_yellow_mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_tights_black_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_tights_black_mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_tights_prints_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_tights_prints_mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_underpants_blue_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_underpants_blue_mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_underpants_granit_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_underpants_granit_mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_underwear_fishes_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_underwear_fishes_mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_underwear_hive_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_underwear_hive_mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_underwear_tighty_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_underwear_tighty_mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_underwear_whiteBlue_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/bb_male_underwear_whiteBlue_mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/hair_male_blinn1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/hair_male_blinn1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/phong8.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/3d Model Player/Male_characterPack/Material/Male/phong8.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/Other 3D Models/Materials/Ceramiks 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/Other 3D Models/Materials/Ceramiks 2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/Other 3D Models/Materials/Material #33.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/Other 3D Models/Materials/Material #33.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/Other 3D Models/Materials/metal.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3D Models &amp; Texture/Other 3D Models/Materials/metal.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animatiions/Animatii/Materials/Liam_Body_Diffuse.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animatiions/Animatii/Materials/Liam_Body_Diffuse.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animatiions/Animatii/Materials/Liam_Bottom_Diffuse.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animatiions/Animatii/Materials/Liam_Bottom_Diffuse.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animatiions/Animatii/Materials/Liam_Shoes_Diffuse.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animatiions/Animatii/Materials/Liam_Shoes_Diffuse.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animatiions/Animatii/Materials/Liam_Top_Diffuse.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animatiions/Animatii/Materials/Liam_Top_Diffuse.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animatiions/Animatii/neutral_idle.fbm/Liam_Body_Normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animatiions/Animatii/neutral_idle.fbm/Liam_Body_Normal.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animatiions/Animatii/neutral_idle.fbm/Liam_Bottom_Normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animatiions/Animatii/neutral_idle.fbm/Liam_Bottom_Normal.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animatiions/Animatii/neutral_idle.fbm/Liam_Shoes_Normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animatiions/Animatii/neutral_idle.fbm/Liam_Shoes_Normal.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animatiions/Animatii/neutral_idle.fbm/Liam_Top_Normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animatiions/Animatii/neutral_idle.fbm/Liam_Top_Normal.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animatiions/MaleCustomize.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animatiions/MaleCustomize.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Baseball - Task 1 and 2 and 3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Baseball - Task 1 and 2 and 3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Baseball.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Baseball.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BaseballStadium/Buildings/Materials/LIGHT.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BaseballStadium/Buildings/Materials/LIGHT.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BaseballStadium/Buildings/Materials/MAIN_LIGHT.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BaseballStadium/Buildings/Materials/MAIN_LIGHT.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BaseballStadium/Buildings/Materials/NET.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BaseballStadium/Buildings/Materials/NET.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BaseballStadium/Buildings/Materials/Stadium_glass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BaseballStadium/Buildings/Materials/Stadium_glass.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BaseballStadium/Buildings/Materials/Stadium_sand_ground.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BaseballStadium/Buildings/Materials/Stadium_sand_ground.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BaseballStadium/Buildings/Materials/Stadium_sand_line.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BaseballStadium/Buildings/Materials/Stadium_sand_line.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BaseballStadium/Buildings/Materials/Stadium_sand_line2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BaseballStadium/Buildings/Materials/Stadium_sand_line2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BaseballStadium/Buildings/Materials/Stadium_sand_line3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BaseballStadium/Buildings/Materials/Stadium_sand_line3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BaseballStadium/Buildings/Materials/apart_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BaseballStadium/Buildings/Materials/apart_01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BaseballStadium/Buildings/Materials/apart_02.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BaseballStadium/Buildings/Materials/apart_02.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BaseballStadium/Buildings/Materials/apart_03.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BaseballStadium/Buildings/Materials/apart_03.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BaseballStadium/Buildings/Materials/guest.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BaseballStadium/Buildings/Materials/guest.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BaseballStadium/Buildings/Materials/stadium_gard.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BaseballStadium/Buildings/Materials/stadium_gard.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BaseballStadium/Buildings/Materials/stadium_hi_gard2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BaseballStadium/Buildings/Materials/stadium_hi_gard2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BaseballStadium/Buildings/Materials/staidum_cahir.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BaseballStadium/Buildings/Materials/staidum_cahir.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BaseballStadium/Standard Assets/Skyboxes/Sunny2 Skybox.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BaseballStadium/Standard Assets/Skyboxes/Sunny2 Skybox.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Materials/ground.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Materials/ground.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Kevin Iglesias/Melee Warrior Animations/Animations/MeleeWarrior@Death01.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Kevin Iglesias/Melee Warrior Animations/Animations/MeleeWarrior@Death01.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Kevin Iglesias/Melee Warrior Animations/Models/Characters/HumanMeleeWarrior.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Kevin Iglesias/Melee Warrior Animations/Models/Characters/HumanMeleeWarrior.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/test.unity" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;MY301122&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/MY301122/Baseball-main.git&quot;,
+    &quot;accountId&quot;: &quot;7ca232aa-3a00-4d49-85e5-edf2b2a73ea5&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0a2e1cdc28c740eda1958d8128c28373827200/32/77e11f0d/VREditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c9216db4db8d4c60be39fde5e389342b15b400/bd/7c70b1f6/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AnimateHandOnInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/HapticInteractable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Sword.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@2.5.3/Runtime/Interaction/Interactables/XRGrabInteractable.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2fVdDgfAqrVq40Tqk18hMsj0bGA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -27,6 +111,7 @@
   &quot;keyToString&quot;: {
     &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -95,6 +180,11 @@
       <workItem from="1713890383854" duration="2200000" />
       <workItem from="1713955441012" duration="5846000" />
       <workItem from="1713968782061" duration="3019000" />
+      <workItem from="1714052065929" duration="3777000" />
+      <workItem from="1714113206193" duration="1196000" />
+      <workItem from="1714120702866" duration="4154000" />
+      <workItem from="1715047228621" duration="5091000" />
+      <workItem from="1715073793728" duration="3369000" />
     </task>
     <servers />
   </component>
