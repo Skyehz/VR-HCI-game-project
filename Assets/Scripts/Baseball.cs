@@ -12,7 +12,7 @@ public class Baseball : MonoBehaviour
     private Rigidbody _rigidbody;
     public Slider _slider;
     public float baseballSpeed;
-    
+    public distanceTracker distanceTrackerScript;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +31,9 @@ public class Baseball : MonoBehaviour
     {
         if (transform.position.y < 0)
         {
+            distanceTrackerScript.ResetDistance();
             ThrowFastball();
+            
         }
 
         // if (transform.position.z == 0)

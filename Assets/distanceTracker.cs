@@ -17,28 +17,17 @@ public class distanceTracker : MonoBehaviour
 
     private void Start()
     {
-        // Désactive le TextMesh au départ
         distanceText.gameObject.SetActive(false);
-
-        // Récupère le composant XRGrabInteractable
         grabInteractable = GetComponent<XRGrabInteractable>();
-
-        // Abonnez-vous à l'événement de saisie
         grabInteractable.onSelectEntered.AddListener(OnGrab);
-
-        // Désactive le TrailRenderer au départ
         trailRenderer.enabled = false;
     }
 
     public void SetStartPoint(Vector3 position)
     {
-        // Définit la position donnée comme point de départ
         startPoint = position;
-        // Réinitialise la distance parcourue à zéro
         distanceTraveled = 0f;
-        // Active le suivi de la distance
         trackDistance = true;
-        // Active le TextMesh
         distanceText.gameObject.SetActive(true);
     }
 
@@ -57,19 +46,14 @@ public class distanceTracker : MonoBehaviour
 
     public void ResetDistance()
     {
-        // Réinitialise la distance parcourue à zéro
         distanceTraveled = 0f;
-        // Désactive le suivi de la distance
         trackDistance = false;
-        // Réinitialise le TextMesh à "0 m"
         distanceText.text = "0 m";
     }
 
     private void OnGrab(XRBaseInteractor interactor)
     {
-        // Réinitialise la distance parcourue lorsque la balle est saisie
         ResetDistance();
-        // Désactive le TrailRenderer lorsque la balle est saisie
             trailRenderer.enabled = false;
     }
 
@@ -77,12 +61,9 @@ public class distanceTracker : MonoBehaviour
     {
         if (collision.gameObject == batObject)
         {
-            // Réinitialise la distance parcourue lorsque la balle est touchée par la batte
             ResetDistance();
-            // Définit le point de départ à la position actuelle de la balle
             SetStartPoint(transform.position);
-            // Active le TrailRenderer lorsque la balle est touchée par la batte
-                trailRenderer.enabled = true;
+            trailRenderer.enabled = true;
         }
     }
 }
