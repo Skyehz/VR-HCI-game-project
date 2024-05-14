@@ -6,11 +6,11 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class distanceTracker : MonoBehaviour
 {
-    public TextMeshProUGUI distanceText; // Texte pour afficher la distance parcourue
-    public TrailRenderer trailRenderer; // TrailRenderer pour la traînée de la balle
-    private float distanceTraveled = 0f; // Distance parcourue par la sphère
-    private Vector3 startPoint; // Point de départ
-    private bool trackDistance = false; // Drapeau pour activer le suivi de la distance
+    public TextMeshProUGUI distanceText; // Text to show the distance traveled
+    public TrailRenderer trailRenderer; // TrailRenderer for the trail of the ball
+    private float distanceTraveled = 0f; // Distance traveled by the ball
+    private Vector3 startPoint; // Startitng point
+   private bool trackDistance = false; // Flag (boolean) to activate or not the track of the distance
     private XRGrabInteractable grabInteractable;
 
     public GameObject batObject;
@@ -33,17 +33,18 @@ public class distanceTracker : MonoBehaviour
 
     private void Update()
     {
-        // Vérifie si le suivi de la distance est activé
+        // Verify if the distance tracker is activated
         if (trackDistance)
         {
-            // Calcule la distance parcourue depuis le point de départ
+            // Calculate the distance traveled from the starting point 
             distanceTraveled = Vector3.Distance(startPoint, transform.position);
 
-            // Met à jour le texte pour afficher la distance parcourue
+            // Update the text to show the distance traveled
             distanceText.text = distanceTraveled.ToString("F2") + " m";
         }
     }
 
+    // Reset the distance and un track the Distance of the ball
     public void ResetDistance()
     {
         distanceTraveled = 0f;
@@ -51,14 +52,16 @@ public class distanceTracker : MonoBehaviour
         distanceText.text = "0 m";
     }
 
+    // When grabbing the ball the distance is reseted and the trail is removed
     private void OnGrab(XRBaseInteractor interactor)
     {
         ResetDistance();
-            trailRenderer.enabled = false;
+        trailRenderer.enabled = false;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
+        // When the ball hit the Bat we start to track the distance of the ball
         if (collision.gameObject == batObject)
         {
             ResetDistance();

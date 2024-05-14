@@ -32,6 +32,7 @@ public class Baseball : MonoBehaviour
         if (transform.position.y < 0)
         {
             distanceTrackerScript.ResetDistance();
+            // Can set the score 
             ThrowFastball();
             
         }
@@ -56,8 +57,8 @@ public class Baseball : MonoBehaviour
     {
         System.Random random = new System.Random();  
         double x = random.NextDouble();  
-        double y = random.NextDouble();  
-        int z = random.Next(80, 100); 
+        double y = random.NextDouble() + 2;  
+        int z = random.Next(45, 75); 
         transform.position = GetRandomThrowPoint();
         _rigidbody.velocity = new Vector3((float)x, (float)y, z);
         _rigidbody.angularVelocity = new Vector3(-50, 0, 0);
