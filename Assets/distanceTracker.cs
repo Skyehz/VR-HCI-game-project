@@ -9,17 +9,22 @@ public class distanceTracker : MonoBehaviour
     public TextMeshProUGUI distanceText; // Text to show the distance traveled
     public TrailRenderer trailRenderer; // TrailRenderer for the trail of the ball
     private float distanceTraveled = 0f; // Distance traveled by the ball
-    private Vector3 startPoint; // Startitng point
-   private bool trackDistance = false; // Flag (boolean) to activate or not the track of the distance
-    private XRGrabInteractable grabInteractable;
+    private Vector3 startPoint; // Starting point
+    private bool trackDistance = false; // Flag (boolean) to activate or not the track of the distance
 
     public GameObject batObject;
+    public GameObject ballCamera; // Prefab for the new camera to follow the ball
+    public float groundLevel = 0.0f; // The y-level that is considered the ground
+    private bool isFollowingBall = false; // Flag to check if the camera is following the ball
+
+    public Vector3 cameraOffset = new Vector3(0, 2, -5); // Offset for the camera position
+    public float smoothTime = 0.3f; // SmoothDamp time
+
+    private Vector3 velocity = Vector3.zero;
 
     private void Start()
     {
         distanceText.gameObject.SetActive(false);
-        grabInteractable = GetComponent<XRGrabInteractable>();
-        grabInteractable.onSelectEntered.AddListener(OnGrab);
         trailRenderer.enabled = false;
     }
 
@@ -42,9 +47,28 @@ public class distanceTracker : MonoBehaviour
             // Update the text to show the distance traveled
             distanceText.text = distanceTraveled.ToString("F2") + " m";
         }
+
+        // If the camera is following the ball, update its position
+        if (isFollowingBall && ballCamera.GetComponent<Camera>() != null)
+        {
+            Vector3 targetPosition = transform.position + cameraOffset;
+            ballCamera.GetComponent<Camera>().transform.position = Vector3.SmoothDamp(ballCamera.GetComponent<Camera>().transform.position, targetPosition, ref velocity, smoothTime);
+            ballCamera.GetComponent<Camera>().transform.LookAt(transform.position);
+        }
     }
 
-    // Reset the distance and un track the Distance of the ball
+    public void StopFollowingBall()
+    {
+        if (ballCamera.GetComponent<Camera>() != null)
+        {
+            ballCamera.GetComponent<Camera>().gameObject.SetActive(false);
+        }
+
+        isFollowingBall = false;
+        ResetDistance();
+    }
+
+    // Reset the distance and untrack the distance of the ball
     public void ResetDistance()
     {
         distanceTraveled = 0f;
@@ -52,21 +76,36 @@ public class distanceTracker : MonoBehaviour
         distanceText.text = "0 m";
     }
 
-    // When grabbing the ball the distance is reseted and the trail is removed
+    // When grabbing the ball the distance is reset and the trail is removed
     private void OnGrab(XRBaseInteractor interactor)
     {
-        ResetDistance();
+        StopFollowingBall();
         trailRenderer.enabled = false;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        // When the ball hit the Bat we start to track the distance of the ball
+        // When the ball hits the bat we start to track the distance of the ball
         if (collision.gameObject == batObject)
         {
             ResetDistance();
             SetStartPoint(transform.position);
             trailRenderer.enabled = true;
+            StartFollowingBall();
         }
+    }
+
+    private void StartFollowingBall()
+    {
+        GameObject cameraObject = Instantiate(ballCamera);
+        SetupBallFollowCamera(ballCamera.GetComponent<Camera>());
+        ballCamera.GetComponent<Camera>().gameObject.SetActive(true);
+        isFollowingBall = true;
+    }
+
+    private void SetupBallFollowCamera(Camera camera)
+    {
+        // Set the viewport rect to display the camera in the top-left corner
+        camera.rect = new Rect(0.75f, 0.75f, 0.25f, 0.25f); // Adjust as necessary for position and size
     }
 }

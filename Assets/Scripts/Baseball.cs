@@ -13,6 +13,7 @@ public class Baseball : MonoBehaviour
     public Slider _slider;
     public float baseballSpeed;
     public distanceTracker distanceTrackerScript;
+    public GameObject terrainPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,16 +28,40 @@ public class Baseball : MonoBehaviour
     }
 
     // Update is called once per frame
+    int CheckBallPosition()
+    {
+        Vector3 ballPosition = transform.position;
+        Vector3 terrainPosition = terrainPrefab.transform.position;
+        Vector3 terrainSize = terrainPrefab.GetComponent<Collider>().bounds.size;
+
+        Debug.Log(terrainPrefab.GetComponent<Collider>().bounds.size);
+        // Vérifier si la position de la balle est à l'intérieur du terrain
+        if (ballPosition.x >= terrainPosition.x - terrainSize.x / 2f &&
+            ballPosition.x <= terrainPosition.x + terrainSize.x / 2f &&
+            ballPosition.y >= terrainPosition.y - terrainSize.y / 2f &&
+            ballPosition.y <= terrainPosition.y + terrainSize.y / 2f &&
+            ballPosition.z >= terrainPosition.z - terrainSize.z / 2f &&
+            ballPosition.z <= terrainPosition.z + terrainSize.z / 2f)
+        {
+            return (0);
+        }
+        else
+        {
+            return(1);
+        }
+    }
+
     void Update()
     {
-        if (transform.position.y < 0)
+        if (transform.position.y < 0.5 || CheckBallPosition() == 1)
         {
             distanceTrackerScript.ResetDistance();
+            distanceTrackerScript.StopFollowingBall();
             // Can set the score 
             ThrowFastball();
             
         }
-
+        CheckBallPosition();
         // if (transform.position.z == 0)
         // {
         //     Debug.Log("球的位置：" + transform.position);
