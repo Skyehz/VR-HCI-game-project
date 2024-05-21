@@ -59,24 +59,21 @@ public class Baseball : MonoBehaviour
 
     void Update()
     {
-        if (transform.position.y < 0.5 || CheckBallPosition() == 1)
+        right_hand_pos = GameObject.Find("mixamorig5:RightHand").transform.position + offset;
+        /*if (transform.position.y < 0.5 || CheckBallPosition() == 1)
         {
             distanceTrackerScript.ResetDistance();
             distanceTrackerScript.StopFollowingBall();
             // Can set the score 
-            ThrowFastball();
+            ThrowFastball(right_hand_pos);
             
-        }
-        CheckBallPosition();
-        // if (transform.position.z == 0)
-        // {
-        //     Debug.Log("球的位置：" + transform.position);
-        // }
-        right_hand_pos = GameObject.Find("mixamorig5:RightHand").transform.position + offset;
+        }*/
         AnimatorStateInfo stateInfo = _animator.GetCurrentAnimatorStateInfo(0);
-        Debug.Log(stateInfo.normalizedTime);
+        /*Debug.Log(stateInfo.normalizedTime);*/
         if (stateInfo.normalizedTime > throw_time && flag && stateInfo.IsName("Pitched"))
         {
+            distanceTrackerScript.ResetDistance();
+            distanceTrackerScript.StopFollowingBall();
             ThrowFastball(right_hand_pos);
             flag = false;
         }
