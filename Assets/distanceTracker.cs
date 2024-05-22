@@ -108,4 +108,13 @@ public class distanceTracker : MonoBehaviour
         // Set the viewport rect to display the camera in the top-left corner
         camera.rect = new Rect(0.75f, 0.75f, 0.25f, 0.25f); // Adjust as necessary for position and size
     }
+    public void enableTrail()
+    {
+        trailRenderer.enabled = true;
+    }
+
+    public void disableTrail()
+    {
+        trailRenderer.enabled = false;
+    }
 }

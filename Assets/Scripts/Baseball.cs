@@ -72,8 +72,10 @@ public class Baseball : MonoBehaviour
         /*Debug.Log(stateInfo.normalizedTime);*/
         if (stateInfo.normalizedTime > throw_time && flag && stateInfo.IsName("Pitched"))
         {
+
             distanceTrackerScript.ResetDistance();
             distanceTrackerScript.StopFollowingBall();
+            distanceTrackerScript.disableTrail();
             ThrowFastball(right_hand_pos);
             flag = false;
         }
@@ -84,6 +86,8 @@ public class Baseball : MonoBehaviour
 
         if (stateInfo.IsName("Stand"))
         {
+            distanceTrackerScript.StopFollowingBall();
+            distanceTrackerScript.disableTrail();
             _rigidbody.transform.position = right_hand_pos;
             flag = true;
         }
