@@ -17,6 +17,7 @@ public class Baseball : MonoBehaviour
     private Vector3 right_hand_pos;
     [SerializeField]private double throw_time = 0.36;
     private Vector3 offset = new Vector3(-0.115f, -0.183f, 0.0f);
+    public bool isFoul = false;
     
     // Start is called before the first frame update
     void Start()
@@ -30,7 +31,10 @@ public class Baseball : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        Debug.Log("Congratulations! You hit the ball.");
+        if (other.collider.CompareTag("FoulEdge"))
+        {
+            isFoul = true;
+        }
     }
 
     // Update is called once per frame

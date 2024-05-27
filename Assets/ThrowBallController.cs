@@ -18,7 +18,7 @@ public class ThrowBallController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        pitcherMove();
+        // pitcherMove();
     }
 
     void pitcherMove()
@@ -39,5 +39,15 @@ public class ThrowBallController : MonoBehaviour
             animator.SetInteger("IsThrow", move_var);
             time = -2.0f;
         }
+    }
+
+    void pitcherMovePro()
+    {
+        // 球没被打到，投手直接重新投球
+        
+        
+        // 球被打飞，等球落地后投手再投球
+        
+        
     }
 }
