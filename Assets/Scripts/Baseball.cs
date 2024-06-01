@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Result;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,6 +20,8 @@ public class Baseball : MonoBehaviour
     [SerializeField] private double throw_time = 0.36;
     private Vector3 offset = new Vector3(-0.115f, -0.183f, 0.0f);
     public bool isFoul = false;
+    
+    public Result.ResultState m_ResultState = Result.ResultState.Foul;
 
     void Start()
     {
@@ -27,14 +30,25 @@ public class Baseball : MonoBehaviour
         _animator = GameObject.Find("Baseball Pitching").GetComponent<Animator>();
 
         // Lancez l'animation dès le début avec le délai spécifié
-        StartCoroutine(RestartAnimationAfterDelay(ballThrowDelay));
+        // StartCoroutine(RestartAnimationAfterDelay(ballThrowDelay));
     }
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.collider.CompareTag("FoulEdge"))
+        if (other.collider.CompareTag("HomeRunBound"))
         {
-            isFoul = true;
+            // Debug.Log("Home Run!!!");
+            m_ResultState = ResultState.HR;
+        }
+        else if(other.collider.CompareTag("Ground"))
+        {
+            // Debug.Log("Ground Ball!!!");
+            m_ResultState = ResultState.Ground;
+        }
+        else
+        {
+            // Debug.Log("Foul Ball!!!");
+            m_ResultState = ResultState.Foul;
         }
     }
 
@@ -44,7 +58,7 @@ public class Baseball : MonoBehaviour
         Vector3 terrainPosition = terrainPrefab.transform.position;
         Vector3 terrainSize = terrainPrefab.GetComponent<Collider>().bounds.size;
 
-        Debug.Log(terrainPrefab.GetComponent<Collider>().bounds.size);
+        // Debug.Log(terrainPrefab.GetComponent<Collider>().bounds.size);
 
         if (ballPosition.x >= terrainPosition.x - terrainSize.x / 2f &&
             ballPosition.x <= terrainPosition.x + terrainSize.x / 2f &&
@@ -75,7 +89,7 @@ public class Baseball : MonoBehaviour
             ThrowFastball(right_hand_pos);
             flag = false;
             // Démarrez la coroutine avec le délai spécifié
-            StartCoroutine(RestartAnimationAfterDelay(ballThrowDelay));
+            // StartCoroutine(RestartAnimationAfterDelay(ballThrowDelay));
         }
         else if (stateInfo.IsName("Pitched") && flag && stateInfo.normalizedTime <= throw_time)
         {
@@ -86,16 +100,9 @@ public class Baseball : MonoBehaviour
         {
             distanceTrackerScript.StopFollowingBall();
             distanceTrackerScript.disableTrail();
-            _rigidbody.transform.position = right_hand_pos;
+            // _rigidbody.transform.position = right_hand_pos;
             flag = true;
         }
-    }
-
-    IEnumerator RestartAnimationAfterDelay(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        _animator.Play("Pitched", 0, 0f);
-        flag = true;
     }
 
     Vector3 GetRandomThrowPoint()
@@ -103,7 +110,7 @@ public class Baseball : MonoBehaviour
         System.Random random = new System.Random();
         double x = random.NextDouble() * 1.6 - 0.8;  
         double y = random.NextDouble() * 0.4 + 2.2;  
-        Debug.Log("出手点随机x:" + x + " y:" + y);
+        // Debug.Log("出手点随机x:" + x + " y:" + y);
         return new Vector3((float)x, (float)y, -30);
     }
 

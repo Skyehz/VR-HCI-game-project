@@ -9,6 +9,7 @@ TagManager:
   - OutOfBound
   - Bat
   - FoulEdge
+  - Ground
   layers:
   - Default
   - TransparentFX
