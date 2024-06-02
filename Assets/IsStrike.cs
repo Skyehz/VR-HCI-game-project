@@ -27,7 +27,7 @@ public class IsStrike : MonoBehaviour
         {
             flag = false;
             point.position = new Vector3(baseballTransform.position.x, baseballTransform.position.y, -1.013f);
-            Debug.Log("速度：" + _rigidbody.velocity.magnitude);
+            // Debug.Log("速度：" + _rigidbody.velocity.magnitude);
             // rectTransform.localPosition = new Vector3(
             //     (baseballTransform.position.x - strikeZone.position.x) * 100,
             //     (baseballTransform.position.y - strikeZone.position.y) * 100,

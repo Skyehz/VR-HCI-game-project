@@ -16,7 +16,10 @@ public class HapticInteractable : MonoBehaviour
     }
     private void OnCollisionEnter(Collision other)
     {
-        hapticOnActivated.TriggerHaptic(LeftRightController);
+        if (other.collider.CompareTag("Ball"))
+        {
+            hapticOnActivated.TriggerHaptic(LeftRightController);
+        }
     }
     
     [System.Serializable]
