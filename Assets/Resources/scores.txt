@@ -1,5 +1,5 @@
-{"name":"hjkhjk","score":26}
-{"name":"zzz","score":15}
-{"name":"213","score":9}
-{"name":"ad","score":6}
-{"name":"g","score":6}
+{"name":"hjkhjk","score":10}
+{"name":"zzz","score":6}
+{"name":"213","score":4}
+{"name":"ad","score":2}
+{"name":"g","score":0}

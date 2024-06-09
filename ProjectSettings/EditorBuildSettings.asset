@@ -5,16 +5,14 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/MenuScene.unity
-    guid: b2af85c5819be4a42b8a55c34b056791
-  - enabled: 0
-    path: Assets/Scenes/DerbyScene.unity
-    guid: 6bffeb1cd85d514429948e3efbf169d1
+  - enabled: 1
+    path: Assets/Scenes/Test 1.unity
+    guid: 312e8383263bc9a41ac0bb3bd6eb9130
   - enabled: 1
     path: Assets/Baseball - Task 1 and 2 and 3.unity
     guid: c850c0c6cb72e75458005f2649d6eb57
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 3de937cc4a38a474884ad4a99442e6ab, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 76ed09f903fa663488ab53cbeefa1102, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 5e53c38a59bec5848b0baf944a40b6df, type: 2}
     xr.sdk.mock-hmd.settings: {fileID: 11400000, guid: f95f50015385ba24c9872834ad4c03b5, type: 2}

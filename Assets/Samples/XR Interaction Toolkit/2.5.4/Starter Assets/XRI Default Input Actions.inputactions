@@ -781,6 +781,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Press Trigger",
+                    "type": "Button",
+                    "id": "994f1fdc-ad7d-4818-a117-fb80986ea6f6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Tracked",
+                    "type": "Button",
+                    "id": "497b41f6-7864-4aed-bbad-ecc14a0626ca",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -946,6 +964,28 @@
                     "processors": "ScaleVector2(x=0),StickDeadzone",
                     "groups": "Generic XR Controller",
                     "action": "Scale Delta",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e27d8650-a27d-4bb3-85df-6433b6b350c2",
+                    "path": "<XRController>{LeftHand}/{TriggerButton}",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Press Trigger",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "99dbe28b-865d-496e-9209-f424b3cf5a20",
+                    "path": "<XRController>{LeftHand}/{IsTracked}",
+                    "interactions": "Hold(duration=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Tracked",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
