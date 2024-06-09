@@ -131,7 +131,7 @@ public class IsHit : MonoBehaviour
                 if (stand_time > 6.0f)
                 {
                     stand_time = 0;
-                    if (throw_times < 8)
+                    if (throw_times < 15)
                     {
                         if (isGrabbed)
                         {
