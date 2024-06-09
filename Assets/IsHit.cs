@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Result;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class IsHit : MonoBehaviour
 {
@@ -13,9 +15,20 @@ public class IsHit : MonoBehaviour
     private Collider baseballCollider;
     private Baseball _baseball;
     public float ballThrowDelay = 1f; // Valeur par défaut, peut être ajustée depuis l'inspecteur
-
+    private bool isDisplayMenu = false;
+    public GameObject Menu;
+    
     private ResultText _resultText;
 
+    private int _score = 0;
+    private int throw_times = 0;
+    
+    public AudioSource homerunSound;
+    public AudioSource groundballSound;
+
+    public XRGrabInteractable grabInteractable;
+    public Rigidbody bat;
+    private bool isGrabbed = false;
     
     // Start is called before the first frame update
     void Start()
@@ -26,9 +39,22 @@ public class IsHit : MonoBehaviour
         _baseball = GameObject.Find("Baseball").GetComponent<Baseball>();
         _resultText = GameObject.Find("ResultText").GetComponent<ResultText>();
         
-        StartCoroutine(RestartAnimationAfterDelay(ballThrowDelay));
+        // StartCoroutine(RestartAnimationAfterDelay(ballThrowDelay));
+        
+        grabInteractable.selectEntered.AddListener(OnGrabStarted);
+        grabInteractable.selectExited.AddListener(OnGrabEnded);
     }
 
+    private void OnGrabStarted(SelectEnterEventArgs args)
+    {
+        isGrabbed = true;
+    }
+    
+    private void OnGrabEnded(SelectExitEventArgs args)
+    {
+        isGrabbed = false;
+    }
+    
     IEnumerator RestartAnimationAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
@@ -45,71 +71,87 @@ public class IsHit : MonoBehaviour
         }
     }
 
+    public int getScore()
+    {
+        return _score;
+    }
+    
+    public int getThrowTimes()
+    {
+        return throw_times;
+    }
+    
     private bool isFoul()
     {
         return _baseball.isFoul;
+    }
+
+    public void ResetScore()
+    {
+        _score = 0;
+        throw_times = 0;
+        Debug.Log("分数清零：" + _score);
     }
     
     // Update is called once per frame
     void Update()
     {
-        if (isHitBall)
+        // if (!isGrabbed)
+        // {
+        //     return;
+        // }
+        Debug.Log(isGrabbed);
+        if (!Menu.activeSelf)
         {
-            wait_time += Time.deltaTime;
-            if (wait_time > 6.0f)
+            if (isHitBall)
             {
-                wait_time = 0;
-                isHitBall = false;
-                _resultText.DisplayResult(_baseball.m_ResultState);
-                Debug.Log("打出了" + _baseball.m_ResultState);
-            }
-        }
-        else
-        {
-            stand_time += Time.deltaTime;
-            if (stand_time > 6.0f)
-            {
-                stand_time = 0;
-                StartCoroutine(RestartAnimationAfterDelay(ballThrowDelay));
-            }
-        }
-        /*if (isHitBall)
-        {
-            stand_time = 0;
-            stand_time += Time.deltaTime;
-            _animator.SetInteger("IsThrow", 0);
-            if (stand_time > 5)
-            {
-                stand_time = 0;
-                isHitBall = false;
-            }
-            // 判断球是否出界（不出界：Home Run, Ground, 出界：Foul Ball）
-            if (isFoul())
-            {
-                Debug.Log("Foul Ball!");
+                wait_time += Time.deltaTime;
+                if (wait_time > 8.0f)
+                {
+                    wait_time = 0;
+                    isHitBall = false;
+                    _resultText.DisplayResult(_baseball.m_ResultState);
+                    // Debug.Log("打出了" + _baseball.m_ResultState);
+                    if(_baseball.m_ResultState == ResultState.HR)
+                    {
+                        _score += 6;
+                        homerunSound.Play();
+                        //Debug.Log("当前分数：" + _score);
+                    } else if (_baseball.m_ResultState == ResultState.Ground)
+                    {
+                        _score += 2;
+                        groundballSound.Play();
+                        //Debug.Log("当前分数：" + _score);
+                    }
+                }
             }
             else
             {
-                Debug.Log("Home Run, Ground");
+                stand_time += Time.deltaTime;
+                if (stand_time > 6.0f)
+                {
+                    stand_time = 0;
+                    if (throw_times < 8)
+                    {
+                        if (isGrabbed)
+                        {
+                            throw_times += 1;
+                            StartCoroutine(RestartAnimationAfterDelay(ballThrowDelay));
+                        }
+                    }
+                    else
+                    {
+                        throw_times = 0;
+                        Menu.SetActive(true);
+                    }
+                }
             }
-            // 判断球是否是全垒打（是：Home Run, 不是：Ground）
-            
         }
         else
         {
-            stand_time += Time.deltaTime;
-            if (stand_time < waitTime)
-            {
-                _animator.SetInteger("IsThrow", 1);
-            }
-            else if (stand_time > waitTime && stand_time < waitTime + 3)
-            {
-                _animator.SetInteger("IsThrow", 0);
-            }
-            else if (stand_time > waitTime + 3)
-            {
-                stand_time = 0;
-            }
-        }*/
+            Debug.Log("游戏暂停，提交成绩，关闭菜单后开始");
+        }
+        
+        
     }
 }

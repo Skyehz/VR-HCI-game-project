@@ -6,6 +6,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class HapticInteractable : MonoBehaviour
 {
     public Haptic hapticOnActivated;
+    public AudioSource hitSound;
 
     public XRBaseController LeftRightController;
     // Start is called before the first frame update
@@ -19,6 +20,7 @@ public class HapticInteractable : MonoBehaviour
         if (other.collider.CompareTag("Ball"))
         {
             hapticOnActivated.TriggerHaptic(LeftRightController);
+            hitSound.Play();
         }
     }
     

@@ -12,13 +12,9 @@ public class StartGame : MonoBehaviour
     //public InputActionReference tirgger_Action;
     //public InputActionReference is_tracked;
 
-    public void OnClick(bool isClick)
+    public void OnClick()
     {
-        if (isClick)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
-        
+        SceneManager.LoadScene(1);
     }
     private void Update()
     {
