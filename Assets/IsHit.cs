@@ -42,17 +42,11 @@ public class IsHit : MonoBehaviour
         // StartCoroutine(RestartAnimationAfterDelay(ballThrowDelay));
         
         grabInteractable.selectEntered.AddListener(OnGrabStarted);
-        grabInteractable.selectExited.AddListener(OnGrabEnded);
     }
 
     private void OnGrabStarted(SelectEnterEventArgs args)
     {
         isGrabbed = true;
-    }
-    
-    private void OnGrabEnded(SelectExitEventArgs args)
-    {
-        isGrabbed = false;
     }
     
     IEnumerator RestartAnimationAfterDelay(float delay)
